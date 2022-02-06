@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="MauiApp1.Elements.ItemPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp1.Elements"
+             BackgroundColor="White" Margin="8" MinimumHeightRequest="700">
+    <ContentView.Content>
+        <AbsoluteLayout>
+            <StackLayout Margin="0 0 80 0">
+                <HorizontalStackLayout>
+                    <Button Margin="0 8" Text="back" Clicked="Button_Clicked"/>
+                    <Label Margin="8 16" Text="Header" FontSize="Large" x:Name="Header"
+                   HorizontalOptions="Center"
+                   TextColor="Purple"
+                   VerticalOptions="Center"/>
+                    <Button Margin="0 8" Text="delete" Background="red" Clicked="Delete_Clicked"/>
+                </HorizontalStackLayout>
+
+                <StackLayout Margin="24 0 0 16" x:Name="ItemsList">
+
+                </StackLayout>
+                <GridLayout Margin="24 16 0 16">
+                    <Button HorizontalOptions="Start"  Text="Add New item" Clicked="Button_Clicked_1"/>
+                    <Button HorizontalOptions="End" Text="Save" VerticalOptions="End" Clicked="Save_Clicked"/>
+                </GridLayout>
+                
+            </StackLayout>
+        </AbsoluteLayout>
+            
+             
+        
+    </ContentView.Content>
+</ContentView>

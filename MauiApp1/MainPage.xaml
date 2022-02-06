@@ -1,0 +1,36 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+            >
+    <GridLayout>
+        <GridLayout.RowDefinitions>
+            <RowDefinition Height="72"/>
+            <RowDefinition/>
+            <RowDefinition Height="80"/>
+
+        </GridLayout.RowDefinitions>
+
+        <Label TextColor="Purple"
+                Text="My TODO"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"/>
+
+  
+
+        <ScrollView   GridLayout.Row="1" x:Name="Scroll">
+            <Grid x:Name="MainGrid">
+                
+            </Grid>
+        </ScrollView>
+        <Grid GridLayout.Row="2" Background="Gray">
+            <HorizontalStackLayout  HorizontalOptions="CenterAndExpand"  >
+                <Button x:Name="AddButton" Clicked="AddButton_Clicked" Margin="8" HeightRequest="64" Text="add"/>
+                <Button x:Name="ListButton" Clicked="ListButton_Clicked" Margin="8"  HeightRequest="64" Text="list"/>
+            </HorizontalStackLayout>
+        </Grid>
+
+
+    </GridLayout>
+</ContentPage>
